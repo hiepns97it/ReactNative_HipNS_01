@@ -33,22 +33,24 @@ import {
   AppRegistry,
   StatusBar,
   StyleSheet, Text, View
-} from 'react-native'; 
+} from 'react-native';
 
-class Demo1 extends Component {
-  constructor(props){
+import HiepNS from './src/components/HiepNS';
+
+export default class Demo1 extends Component {
+  constructor(props) {
     console.log('constructor');
     super(props);
   }
 
-  UNSAFE_componentWillMount(){
+  UNSAFE_componentWillMount() {
     // hàm cũ sử dụng componentWillMount
     console.log('componentWillUnmounts');
   }
 
-  render(){
+  render() {
     console.log('render');
-    return(
+    return (
       // start style trong react 
       // <View style={ style.body }>
       //   {/* <StatusBar hidden="true"/> ẩn thanh bar trên cùng của phone */} 
@@ -59,87 +61,78 @@ class Demo1 extends Component {
       // end style trong react
 
       // start thực hành flex
-        // <View style={style.flex}>
-        //     <View style={style.flex_1}>
-        //     </View>
-        //     <View style={style.flex_2}>
+      // <View style={style.flex}>
+      //     <View style={style.flex_1}>
+      //     </View>
+      //     <View style={style.flex_2}>
 
-        //     </View>
-        // </View>
+      //     </View>
+      // </View>
       // end thực hành flex
 
       // thực hành flex vẽ bàn phím máy tính
-        // <View style={ styleMT.body }>
-        //   <View style={styleMT.dong}>
-        //     <View style={styleMT.cot}>
-        //       <Text>1</Text>
-        //     </View>
-        //     <View style={styleMT.cot}>
-        //       <Text>2</Text>
-        //       <Text>ABC</Text>
-        //     </View>
-        //     <View style={styleMT.cot}>
-        //       <Text>3</Text>
-        //     </View>
-        //   </View>
+      // <View style={ styleMT.body }>
+      //   <View style={styleMT.dong}>
+      //     <View style={styleMT.cot}>
+      //       <Text>1</Text>
+      //     </View>
+      //     <View style={styleMT.cot}>
+      //       <Text>2</Text>
+      //       <Text>ABC</Text>
+      //     </View>
+      //     <View style={styleMT.cot}>
+      //       <Text>3</Text>
+      //     </View>
+      //   </View>
 
-        //   <View style={styleMT.dong}>
-        //     <View style={styleMT.cot}>
-        //       <Text>1</Text>
-        //     </View>
-        //     <View style={styleMT.cot}>
-        //       <Text>2</Text>
-        //     </View>
-        //     <View style={styleMT.cot}>
-        //       <Text>3</Text>
-        //     </View>
-        //   </View>
+      //   <View style={styleMT.dong}>
+      //     <View style={styleMT.cot}>
+      //       <Text>1</Text>
+      //     </View>
+      //     <View style={styleMT.cot}>
+      //       <Text>2</Text>
+      //     </View>
+      //     <View style={styleMT.cot}>
+      //       <Text>3</Text>
+      //     </View>
+      //   </View>
 
-        //   <View style={styleMT.dong}>
-        //     <View style={styleMT.cot}>
-        //       <Text>1</Text>
-        //     </View>
-        //     <View style={styleMT.cot}>
-        //       <Text>2</Text>
-        //     </View>
-        //     <View style={styleMT.cot}>
-        //       <Text>3</Text>
-        //     </View>
-        //   </View>
+      //   <View style={styleMT.dong}>
+      //     <View style={styleMT.cot}>
+      //       <Text>1</Text>
+      //     </View>
+      //     <View style={styleMT.cot}>
+      //       <Text>2</Text>
+      //     </View>
+      //     <View style={styleMT.cot}>
+      //       <Text>3</Text>
+      //     </View>
+      //   </View>
 
-        //   <View style={styleMT.dong}>
-            
-        //     <View style={styleMT.cot}>
-        //       <Text>1</Text>
-        //     </View>
-        //     <View style={styleMT.cot}>
-        //       <Text>2</Text>
-        //     </View>
-        //     <View style={styleMT.cot}>
-        //       <Text>3</Text>
-        //     </View>
-        //   </View> 
-        // </View>
+      //   <View style={styleMT.dong}>
+
+      //     <View style={styleMT.cot}>
+      //       <Text>1</Text>
+      //     </View>
+      //     <View style={styleMT.cot}>
+      //       <Text>2</Text>
+      //     </View>
+      //     <View style={styleMT.cot}>
+      //       <Text>3</Text>
+      //     </View>
+      //   </View> 
+      // </View>
       // end thực hành vẽ bàn phím máy tính
-      <TestComponent/>
-    );
-  }
-
-  componentDidMount(){
-    console.log('componentDidMount');
-  }
-}
-
-export default class  TestComponent extends Component {
-  render(){
-    return(
-      <View>
-        <Text>ooki</Text>
+      <View style={style.body}>
+        <HiepNS title="hiepns" />
       </View>
     );
   }
-}
 
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
+}
 
 const styleMT = StyleSheet.create({
   body: {
@@ -164,7 +157,7 @@ const styleMT = StyleSheet.create({
 
 });
 
-const style  = StyleSheet.create({
+const style = StyleSheet.create({
   body: {
     backgroundColor: 'pink',
     width: 200,
@@ -180,7 +173,7 @@ const style  = StyleSheet.create({
     color: 'red'
   },
 
-  flex_1:{
+  flex_1: {
     backgroundColor: 'red',
     flex: 1
   },
@@ -188,7 +181,7 @@ const style  = StyleSheet.create({
   flex_2: {
     backgroundColor: 'yellow',
     flex: 1
-  }, 
+  },
 
   flex: {
     backgroundColor: 'pink',

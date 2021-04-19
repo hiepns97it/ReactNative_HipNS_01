@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 import {
-    Text, View
+    Text, Touchable, TouchableOpacity, View
 } from 'react-native';
 import PropTypes from 'prop-types';
 
 export default class HiepNS extends Component {
     constructor(props) {
         super(props);
+        //this.test = this.test.bind(this);
     }
 
     UNSAFE_componentWillMount() {
 
     }
 
+    clickMe() {
+        console.log('hiepns click');
+    }
     render() {
         return (
-            <Text>{this.props.title}</Text>
+            <View>
+                <TouchableOpacity onPress={() => { this.clickMe() }}>
+                    <Text>{this.props.title}</Text>
+                </TouchableOpacity>
+            </View>
         );
     }
 

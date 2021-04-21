@@ -36,6 +36,7 @@ import {
 } from 'react-native';
 
 import HiepNS from './src/components/HiepNS';
+import TestState from './src/components/LearnState';
 
 export default class Demo1 extends Component {
   constructor(props) {
@@ -124,7 +125,8 @@ export default class Demo1 extends Component {
       // </View>
       // end thực hành vẽ bàn phím máy tính
       <View style={style.body}>
-        <HiepNS title="hiepns" />
+        {/* <HiepNS title="hiepns" /> */}
+        <TestState></TestState>
       </View>
     );
   }

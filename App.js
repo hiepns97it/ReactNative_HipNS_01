@@ -37,6 +37,7 @@ import {
 
 import HiepNS from './src/components/HiepNS';
 import TestState from './src/components/LearnState';
+import TestInput from './src/components/TextInput';
 
 export default class Demo1 extends Component {
   constructor(props) {
@@ -126,7 +127,8 @@ export default class Demo1 extends Component {
       // end thực hành vẽ bàn phím máy tính
       <View style={style.body}>
         {/* <HiepNS title="hiepns" /> */}
-        <TestState></TestState>
+        {/* <TestState></TestState> */}
+        <TestInput></TestInput>
       </View>
     );
   }

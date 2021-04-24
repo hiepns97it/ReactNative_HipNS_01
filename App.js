@@ -38,6 +38,23 @@ import {
 import HiepNS from './src/components/HiepNS';
 import TestState from './src/components/LearnState';
 import TestInput from './src/components/TextInput';
+import TestListView from './src/components/ListView';
+import TestFlatList from './src/components/FlatList';
+
+const DATA = [
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'First Item',
+  },
+  {
+    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    title: 'Second Item',
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'Third Item',
+  },
+];
 
 export default class Demo1 extends Component {
   constructor(props) {
@@ -125,10 +142,12 @@ export default class Demo1 extends Component {
       //   </View> 
       // </View>
       // end thực hành vẽ bàn phím máy tính
-      <View style={style.body}>
+      <View>
         {/* <HiepNS title="hiepns" /> */}
         {/* <TestState></TestState> */}
-        <TestInput></TestInput>
+        {/* <TestInput></TestInput> */}
+        {/* <TestListView></TestListView> */}
+        <TestFlatList data={DATA}></TestFlatList>
       </View>
     );
   }
